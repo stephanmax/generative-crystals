@@ -5,12 +5,11 @@ class Outline extends Layer {
   }
 
   render() {
+    noFill()
     stroke(this.color)
     strokeWeight(this.strokeWeight)
 
     push()
-
-    translate(width / 2, height / 2)
 
     if (random([true, false])) {
       polygon(6, 0, 0, CRYSTAL_SIZE / 2)

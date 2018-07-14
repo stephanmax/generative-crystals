@@ -2,7 +2,7 @@ class DottedLines extends Layer {
   
   constructor() {
     super()
-    this.dotSize = 4
+    this.dotSize = 1
 	  this.offset = this.stepLength
   }
 
@@ -11,8 +11,6 @@ class DottedLines extends Layer {
     fill(this.color)
 
     push()
-    
-    translate(width / 2, height / 2)
     
     for (let i = 0; i < this.numShapes; i++) {
       

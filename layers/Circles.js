@@ -16,8 +16,6 @@ class Circles extends Layer {
 
     push()
 
-    translate(width / 2, height / 2)
-
     for (let i = 0; i < this.numShapes; i++) {
       ellipse(this.posX, 0, this.shapeSize, this.shapeSize)
       rotate(this.angle)

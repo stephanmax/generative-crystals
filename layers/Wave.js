@@ -14,8 +14,6 @@ class Wave extends Layer {
 
     push()
 
-    translate(width / 2, height / 2)
-
     for (let i = 1; i <= this.numSteps; i++) {
       polygon(6, 0, 0, this.offset + (i * this.stepLength), 30)
     }

@@ -16,8 +16,6 @@ class Center extends Layer {
 
     push()
 
-    translate(width / 2, height / 2)
-
     switch (this.randomShape) {
       case 1:
         rect(0, 0, this.size / 2, this.size / 2)

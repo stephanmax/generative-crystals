@@ -12,8 +12,6 @@ class Lines extends Layer {
 
     push()
     
-    translate(width / 2, height / 2)
-    
     for (let i = 0; i < this.numShapes; i++) {
       line(this.start * this.stepLength, 0, this.end * this.stepLength, 0)
       rotate(this.angle)

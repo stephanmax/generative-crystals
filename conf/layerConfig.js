@@ -12,7 +12,7 @@ const layerConfig = [{
   weight: .7
 }, {
   class: DottedLines,
-  weight: .7
+  weight: .5
 }, {
   class: Ring,
   weight: .7

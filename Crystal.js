@@ -8,11 +8,16 @@ class Crystal {
         return random(1) <= layer.weight
       })
       .map(layer => new layer.class)
-    console.log(this.layers)
   }
 
   render() {
+    push()
+    
+    translate(this.x, this.y)
+    
     this.layers.forEach(layer => layer.render())
+    
+    pop()
   }
 
 }
