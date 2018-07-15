@@ -1,6 +1,7 @@
 import 'p5'
 
 import Crystal from './Crystal.js'
+import { favicon } from './util.js'
 
 const CRYSTAL_SIZE_MAX = 150
 const GAP_MIN = 10
@@ -14,20 +15,22 @@ window.setup = () => {
 }
 
 window.draw = () => {
-	const CRYSTAL_SIZE_ACTUAL = min(CRYSTAL_SIZE_MAX, min(windowWidth, windowHeight) - 2 * GAP_MIN)
+	const crystalSize = min(CRYSTAL_SIZE_MAX, min(windowWidth, windowHeight) - 2 * GAP_MIN)
 	
-	const COLS = int((windowWidth - GAP_MIN) / (CRYSTAL_SIZE_ACTUAL + GAP_MIN))
-	const ROWS = int((windowHeight - GAP_MIN) / (CRYSTAL_SIZE_ACTUAL + GAP_MIN))
+	const cols = int((windowWidth - GAP_MIN) / (crystalSize + GAP_MIN))
+	const rows = int((windowHeight - GAP_MIN) / (crystalSize + GAP_MIN))
 
-	const GAP_HOR = (windowWidth - COLS * CRYSTAL_SIZE_ACTUAL) / (COLS + 1)
-	const GAP_VER = (windowHeight - ROWS * CRYSTAL_SIZE_ACTUAL) / (ROWS + 1)
+	const gapHor = (windowWidth - cols * crystalSize) / (cols + 1)
+	const gapVer = (windowHeight - rows * crystalSize) / (rows + 1)
 	
-	for (let i = 0; i < COLS * ROWS; i++) {
-		const x = GAP_HOR + CRYSTAL_SIZE_ACTUAL / 2 + (i % COLS) * (CRYSTAL_SIZE_ACTUAL + GAP_HOR)
-		const y = GAP_VER + CRYSTAL_SIZE_ACTUAL / 2 + int(i / COLS) * (CRYSTAL_SIZE_ACTUAL + GAP_VER)
+	for (let i = 0; i < cols * rows; i++) {
+		const x = gapHor + crystalSize / 2 + (i % cols) * (crystalSize + gapHor)
+		const y = gapVer + crystalSize / 2 + int(i / cols) * (crystalSize + gapVer)
 		
-		new Crystal(x, y, CRYSTAL_SIZE_ACTUAL).render()
+		new Crystal(x, y, crystalSize).render()
 	}
+
+	favicon(displayDensity(), crystalSize, gapHor, gapVer)
 }
 
 window.windowResized = () => {

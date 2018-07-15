@@ -1,7 +1,7 @@
 {
   "name": "generative-crystals",
   "version": "1.0.0",
-  "description": "Generative design system to create bicolored crystals, based on Matthew Epler‘s ‘Designing Generative Systems’",
+  "description": "Generative design system to create bicolored crystals, based on Matthew Epler’s ‘Designing Generative Systems’",
   "main": "src/sketch.js",
   "directories": {
     "lib": "lib"
