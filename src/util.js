@@ -1,4 +1,4 @@
-function polygon(n, x, y, r, angleOffset = 0) {
+export function polygon(n, x, y, r, angleOffset = 0) {
   const angle = 360 / n
   beginShape()
   for (let i = 0; i < n; i++) {

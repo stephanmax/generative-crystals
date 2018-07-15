@@ -1,13 +1,12 @@
-class Circles extends Layer {
+import Layer from './Layer.js'
+
+export default class Circles extends Layer {
   
   constructor() {
-    super()
+    super(...arguments)
 
-    this.numShapes = this.sides
-    this.angle = 360 / this.numShapes
-
-    this.shapeSize = (CRYSTAL_SIZE_ACTUAL / 2) * .93
-	  this.posX = (CRYSTAL_SIZE_ACTUAL / 2) - (this.shapeSize / 2)
+    this.shapeSize = this.radius * .93
+	  this.posX = this.radius - (this.shapeSize / 2)
   }
 
   render() {

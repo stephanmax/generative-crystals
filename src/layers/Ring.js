@@ -1,10 +1,10 @@
-class Ring extends Layer {
+import Layer from './Layer.js'
+import { polygon } from '../util.js'
+
+export default class Ring extends Layer {
   
   constructor() {
-    super()
-
-    this.numShapes = this.sides
-    this.angle = 360 / this.numShapes
+    super(...arguments)
 
     this.fillColor = random([this.color, color(0, 0, 0, 0)])
     this.randomShape = random([1, 2, 3])

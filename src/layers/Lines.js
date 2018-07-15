@@ -1,7 +1,13 @@
-class Lines extends Layer {
+import Layer from './Layer.js'
+
+export default class Lines extends Layer {
   
   constructor() {
-    super()
+    super(...arguments)
+
+    this.numShapes = random([1, 2]) * this.sides
+    this.angle = 360 / this.numShapes
+
     this.start = floor(random(this.numSteps - 1))
 	  this.end = floor(random(this.start, this.numSteps))
   }

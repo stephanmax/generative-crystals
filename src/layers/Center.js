@@ -1,10 +1,10 @@
-class Center extends Layer {
+import Layer from './Layer.js'
+import { polygon } from '../util.js'
+
+export default class Center extends Layer {
   
   constructor() {
-    super()
-
-    this.numShapes = this.sides
-    this.angle = 360 / this.numShapes
+    super(...arguments)
 
     this.randomShape = random([1, 2, 3])
     this.size = floor(random(this.numSteps / 2, this.numSteps - 2)) * this.stepLength

@@ -1,10 +1,13 @@
-class Wave extends Layer {
+import Layer from './Layer.js'
+import { polygon } from '../util.js'
+
+export default class Wave extends Layer {
   
   constructor() {
-    super()
+    super(...arguments)
 
-    this.offset = (CRYSTAL_SIZE_ACTUAL / 2) * .15
-    this.stepLength = (CRYSTAL_SIZE_ACTUAL / 2) * .85 / this.numSteps
+    this.offset = this.radius * .15
+    this.stepLength = this.radius * .85 / this.numSteps
   }
 
   render() {
