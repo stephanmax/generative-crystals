@@ -1,10 +1,5 @@
-import 'p5'
-
 import Crystal from './Crystal.js'
 import { favicon } from './util.js'
-
-const CRYSTAL_SIZE_MAX = 150
-const GAP_MIN = 10
 
 window.setup = () => {
 	createCanvas(windowWidth, windowHeight)
@@ -15,6 +10,9 @@ window.setup = () => {
 }
 
 window.draw = () => {
+	const CRYSTAL_SIZE_MAX = 150
+	const GAP_MIN = 10
+
 	const crystalSize = min(CRYSTAL_SIZE_MAX, min(windowWidth, windowHeight) - 2 * GAP_MIN)
 	
 	const cols = int((windowWidth - GAP_MIN) / (crystalSize + GAP_MIN))

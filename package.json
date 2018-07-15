@@ -30,8 +30,5 @@
     "rollup-plugin-generate-html-template": "^1.1.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-terser": "^1.0.1"
-  },
-  "dependencies": {
-    "p5": "^0.6.1"
   }
 }
