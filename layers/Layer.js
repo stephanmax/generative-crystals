@@ -6,7 +6,7 @@ class Layer {
     this.angle = 360 / this.numShapes
 
     this.numSteps = random([8, 10])
-    this.stepLength = (CRYSTAL_SIZE / 2) / this.numSteps
+    this.stepLength = (CRYSTAL_SIZE_ACTUAL / 2) / this.numSteps
     
     this.color = random(PALETTE)
     this.strokeWeight = random([1, 2])

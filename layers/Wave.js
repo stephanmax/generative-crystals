@@ -3,8 +3,8 @@ class Wave extends Layer {
   constructor() {
     super()
 
-    this.offset = (CRYSTAL_SIZE / 2) * .15
-    this.stepLength = (CRYSTAL_SIZE / 2) * .85 / this.numSteps
+    this.offset = (CRYSTAL_SIZE_ACTUAL / 2) * .15
+    this.stepLength = (CRYSTAL_SIZE_ACTUAL / 2) * .85 / this.numSteps
   }
 
   render() {

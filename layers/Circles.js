@@ -6,8 +6,8 @@ class Circles extends Layer {
     this.numShapes = this.sides
     this.angle = 360 / this.numShapes
 
-    this.shapeSize = (CRYSTAL_SIZE / 2) * .93
-	  this.posX = (CRYSTAL_SIZE / 2) - (this.shapeSize / 2)
+    this.shapeSize = (CRYSTAL_SIZE_ACTUAL / 2) * .93
+	  this.posX = (CRYSTAL_SIZE_ACTUAL / 2) - (this.shapeSize / 2)
   }
 
   render() {

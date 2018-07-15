@@ -12,10 +12,10 @@ class Outline extends Layer {
     push()
 
     if (random([true, false])) {
-      polygon(6, 0, 0, CRYSTAL_SIZE / 2)
+      polygon(6, 0, 0, CRYSTAL_SIZE_ACTUAL / 2)
     }
     else {
-      ellipse(0, 0, CRYSTAL_SIZE, CRYSTAL_SIZE)
+      ellipse(0, 0, CRYSTAL_SIZE_ACTUAL, CRYSTAL_SIZE_ACTUAL)
     }
 
     pop()

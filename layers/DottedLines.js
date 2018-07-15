@@ -14,7 +14,7 @@ class DottedLines extends Layer {
     
     for (let i = 0; i < this.numShapes; i++) {
       
-      for(let posX = this.offset; posX < CRYSTAL_SIZE / 2; posX += this.stepLength) {
+      for(let posX = this.offset; posX < CRYSTAL_SIZE_ACTUAL / 2; posX += this.stepLength) {
         rect(posX, 0, this.dotSize, this.dotSize)
       }
 
